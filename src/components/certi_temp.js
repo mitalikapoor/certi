@@ -3,6 +3,7 @@ import image1 from "../Assets/logo1.jpg";
 import image2 from "../Assets/logo2.jpg";
 import image3 from "../Assets/logo3.jpg";
 import GB from "../Assets/gb logo.jpg";
+import star from "../Assets/star-fill.svg";
 
 function Certi(props) {
 <<<<<<< HEAD
@@ -34,7 +35,12 @@ function Certi(props) {
                         </div>
                         <div className="col-9">
                               <div className="mb-0 pb-0">
-                                    <p className="fw-light mb-0 pb-0" style={{ fontSize:'3rem' }}>Internship</p>
+                                    <div className="row">
+                                          <p className="col-5 fw-light mb-0 pb-0" style={{ fontSize:'3rem' }}>Internship</p>
+                                          <div className="col-7 d-flex align-items-center">
+                                                {addStar(rating)}
+                                          </div>
+                                    </div>
                                     <p className="fw-bold my-0 py-0" style={{ fontSize:'5rem' }}>Certificate</p>
                               </div>
                               <div className="my-0 py-0">
@@ -58,6 +64,14 @@ function Certi(props) {
             </div>
        </div>
  )
+}
+
+function addStar(count) {
+      let stars = [];
+      for (let index = 0; index < count; index++) {
+            stars.push(<img src={star} className="p-1" alt="star" />);
+      }
+      return stars;
 }
 
 export default Certi;
