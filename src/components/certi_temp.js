@@ -5,7 +5,16 @@ import image3 from "../Assets/logo3.jpg";
 import GB from "../Assets/gb logo.jpg";
 
 function Certi(props) {
+<<<<<<< HEAD
       const { Name, Position, DoJ} = props;
+=======
+      var { Name, Position, DoJ} = props;       // not required if we follow the below method
+      // getting the data from url
+      const params = new URLSearchParams(window.location.search);
+      // assigning in variables
+      Name = params.get("name");
+      Position = params.get("designation");
+>>>>>>> 0c6b6a8 (Initial Commit)
  return (
        <div className="mt-5" style={{ backgroundColor: "#F2E9E0" }}>
             <div className="bg-success">
