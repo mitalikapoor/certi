@@ -6,16 +6,13 @@ import GB from "../Assets/gb logo.jpg";
 import star from "../Assets/star-fill.svg";
 
 function Certi(props) {
-<<<<<<< HEAD
-      const { Name, Position, DoJ} = props;
-=======
       var { Name, Position, DoJ} = props;       // not required if we follow the below method
       // getting the data from url
       const params = new URLSearchParams(window.location.search);
       // assigning in variables
       Name = params.get("name");
       Position = params.get("designation");
->>>>>>> 0c6b6a8 (Initial Commit)
+      let Rating = 5;
  return (
        <div className="mt-5" style={{ backgroundColor: "#F2E9E0" }}>
             <div className="bg-success">
@@ -38,7 +35,7 @@ function Certi(props) {
                                     <div className="row">
                                           <p className="col-5 fw-light mb-0 pb-0" style={{ fontSize:'3rem' }}>Internship</p>
                                           <div className="col-7 d-flex align-items-center">
-                                                {addStar(rating)}
+                                                {addStar(Rating)}
                                           </div>
                                     </div>
                                     <p className="fw-bold my-0 py-0" style={{ fontSize:'5rem' }}>Certificate</p>

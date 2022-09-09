@@ -29,7 +29,7 @@ class Recommendation extends Component{
                 </h1>
                 <div className="row justify-content-center">
                     <div className="col-6">
-                        <form >
+                        <form action="/certi" method="GET">
                             <label htmlFor="name">
                                 Name<span className="text-danger">*</span> 
                             </label>
